@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+	<title>KIIT University </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Keywords" content="KIIT University">
+	<meta name="author" content="Sachin Kumar">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="javascript/js.js="></script>
+
+</head>
+
+<body class="body">
+	<header class="mainheader">
+		<img src="images/logo.png">
+		<content id="search">
+			<form>
+				<input type="text" name="search" placeholder="Search anything..."
+					onclick="window.location.href='search.html'">
+			</form>
+		</content>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="course.html">Course</a></li>
+				<li><a href="download.html">Download</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Login</a></li>
+
+			</ul>
+		</nav>
+	</header>
+	<br>
+	<div class="slideshow-container">
+
+		<div class="iambrpslides fade">
+			<div class="numbertext">01 / 03</div>
+			<img src="https://static.kiit.ac.in/news/2020/08/kiit-building-engering-450x300.jpg">
+		</div>
+
+		<div class="iambrpslides fade">
+			<div class="numbertext">02 / 03</div>
+			<img src="./images/b.jpg">
+		</div>
+
+		<div class="iambrpslides fade">
+			<div class="numbertext">03 / 03</div>
+			<img src="./images/c.jpg">
+		</div>
+
+	</div>
+
+
+	<div style="text-align:center">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("iambrpslides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) { slideIndex = 1 }
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+			setTimeout(showSlides, 2500);
+		}
+	</script>
+	<br>
+
+	<div class="mainContent">
+		<div class="Content">
+			<article class="topContent">
+				<header>
+					<h3><a href="#" title="My First Post">Introduction </a> </h3>
+				</header>
+				<footer>
+					<p class="post-info">KIIT University</p>
+				</footer>
+				<content>
+					<p>KIIT University, KIIT University is an autonomous Private
+						Institution dedicated to maintain excellent academic performance. Since its establishment in
+						2011, KIIT University has been actively working as a regular franchisee of
+						KIIT University Education Limited, Singapore. KIIT University KIIT has an established track
+						record of Academic excellence, within the Networks of KIIT University – Globally. We are
+						supported
+						by a team of dedicated Professors, Lecturers, Counselors, meticulous management with a caring
+						H.R. support service. KIIT University is today producing competitive Graduates,
+						creating an enviable position among employers and Universities both Nationally and
+						Internationally.
+
+						KIIT University, today can proudly boast of having produced sustainable and
+						marketable graduates in various IT and Business & Management programs.
+					</p>
+				</content>
+			</article>
+
+			<article class="bottomContent">
+				<header>
+					<h3><a href="#" title="Pathway Programme">About Programme</a> </h3>
+				</header>
+				<footer>
+					<p class="post-info">This post is written by Sachin Kumar</p>
+				</footer>
+				<content>
+					<p>KIIT was established in 1992 as a vocational training centre with only two staff and 12 students.
+						However, it took shape as an institution only in 1997, when degree engineering programme
+						commenced.
+						KIIT owes its existence to the vision of its founder Prof. Achyuta Samanta who, with no land,
+						limited finances (only Rs. 5000/-) and little knowledge of higher education to create an
+						institution for the benefit of the society.
+						From these small beginnings, KIIT has developed into a leading university with a strong
+						interdisciplinary culture and a commitment to teaching excellence.
+					</p>
+				</content>
+			</article>
+
+
+		</div>
+	</div>
+	<aside class="top-sidebar">
+		<article>
+			<h3>Join us today!</h3>
+			<p>Embark on an exciting learning journey with KIIT University</p>
+		</article>
+	</aside>
+
+	<aside class="middle-sidebar">
+		<article>
+			<h3>Your  Qualification</h3>
+			<p>A Degree to stand out from the crowd…...</p>
+		</article>
+	</aside>
+
+	<aside class="buttom-sidebar">
+		<article>
+			<h3>Stay ahead in your career</h3>
+			<p>Fast track your career with KIIT University</p>
+		</article>
+	</aside>
+	<footer class="mainFooter">
+		<p>Copyright &copy <a href="https://www.facebook.com/">Sachin Kumar</a> </p>
+		<div class="foot" style="justify-content: center;display: flex;align-items: center;">
+			Follow us on:
+			<span>
+				<a href="https://www.facebook.com/">Facebook</a>
+				<a href="https://www.twitter.com/">Twitter</a>
+				<a href="https://www.youtube.com/">Youtube</a>
+			</span>
+		</div>
+	</footer>
+
+</body>
+
+</html>

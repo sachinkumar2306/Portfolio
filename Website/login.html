@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Keywords" content="KIIT University">
+	<meta name="author" content="Sachin Kumar">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-1/css/all.min.css" integrity="sha512-wDB6AYiYP4FO5Sxieamqy9wtpAY3qdHMqlhZecIEUu1YjkLw5gQf/4ZDgOzmCBAF5SheMjmugkpUSVoUrGbLkQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body> 
+<div class = "container">
+    <div class="header">
+        <h2>Login form</h2>
+    </div>
+
+    <form class="form" id= " form" action="#" name = "register">
+            <div class ="forms">
+                <label>Username</label>
+                <input type="text" name="" id="username" placeholder="Enter your Username" autocomplete="off" >
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error message</small>
+            </div>
+            <div class ="forms">
+                <label>Email</label>
+                <input type="email" name="" id="email" placeholder="Enter your Email" autocomplete="off">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error message</small>
+            </div>
+            <div class ="forms">
+                <label>Phone Number</label>
+                <input type="number" name="" id="phone" placeholder="Enter your Phone Number" autocomplete="off">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error message</small>
+            </div>
+            <div class ="forms">
+                <label>Password</label>
+                <input type="password" name="" id="password" placeholder="Enter your Password" autocomplete="off">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error message</small>
+            </div>
+            <div class ="forms">
+                <label>Re-Enter Password</label>
+                <input type="password" name="" id="cpasscode" placeholder="Enter your Password again" autocomplete="off" >
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error message</small>
+            </div>
+            <input type="submit" value = "Submit" class= "btn" name="" onclick="validate()">
+        </form>
+    </div>  
+    <script type="text/javascript">
+
+    function validate() {
+    const username = document.register.username.value;
+    const email = document.register.email.value;
+    const phone = document.register.phone.value;
+    const password = document.register.password.value;
+    const cpasscode = document.register.cpasscode.value;  
+    
+    if(username == "")
+    {
+        alert("Username can't be left blank");
+    }
+    else if(username.length <= 2){
+        alert("Username contains minimum 3 charachters")
+    }
+    else{
+        alert("Welcome" + username)
+    }
+    const isEmail = ()=>{
+        var atSymbol = email.indexOf("@");
+        if(atSymbol < 1)
+        {
+            return false;
+        }
+        var dot = email.lastIndexOf(".")
+        if(dot <= atSymbol + 3 )
+        {
+            return false;
+        }
+        if(dot === email.length -1)     //dot should not be at the end position
+        {
+            return false
+        }
+        return true;
+    }
+
+    //validate email id
+    if(email == "")
+    {
+        alert("Email can't be left blank");
+    }
+    else if(!isEmail(email)){
+        alert("Not a valid E-mail")
+    }
+    else{
+        alert("Welcome" + username)
+    }
+
+    if(phone == "")
+    {
+        alert("Phone number can't be blank")
+    }
+    else if (phone.length < 10){
+        alert("Phone number should be of 10 digit")
+    }
+    else{
+        alert("Success")
+    }
+    }
+    </script> 
+</body>
+</html>

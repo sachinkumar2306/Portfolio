@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search KIIT University</title>
+  <style type="text/css">
+    body{
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <script type="text/javascript">
+    function myFunction() {
+
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+  </script>
+  <style type="text/css">
+    #myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 12px; 
+    background-repeat: no-repeat;
+    width: 100%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+}
+
+#myUL {
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; 
+    margin-top: -1px; 
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none; 
+    font-size: 18px;
+    color: black;
+    display: block; 
+}
+
+#myUL li a.header {
+    background-color: #e2e2e2; 
+    cursor: default; 
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; 
+}
+  </style>
+</head>
+<body>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search your query..">
+
+<ul id="myUL">
+  <li><a href="#" class="header">Section A</a></li>
+  <li><a href="download.html">Download</a></li>
+  <li><a href="course.html">Course</a></li>
+
+  <li><a href="#" class="header">Section B</a></li>
+  <li><a href="index.html">KIIT University</a></li>
+  <li><a href="index.html">Home</a></li>
+
+  <li><a href="#" class="header">Section C</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li><a href="login.html">Placement Login</a></li>
+  <li><a href="index.html">About Us</a></li>
+</ul>
+</body>
+</html>
